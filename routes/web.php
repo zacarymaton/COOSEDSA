@@ -12,6 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
+});
+Route::get('/index', function () {
+    return view('plantilla-2');
 });
 Route::get('/firebase', 'FirebaseController@index');
