@@ -17,30 +17,17 @@ class FirebaseController extends Controller
      */
     public function index()
     {
-        
-     //  $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/key/Firebase.json');
+         
         $firebase=(new Factory)->withServiceAccount(__DIR__.'/key/Firebase.json');
 
-        //$database = $firebase->getDatabase();
+        
         $database = $firebase->createDatabase();
 
         $newPost = $database->getReference('/usuario/');
         
         echo "<pre>";
         print_r($newPost->getvalue());
-       /* $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/Firebase.json');
-        $firebase = (new Factory)
-        ->withServiceAccount($serviceAccount);
-
-        $database = $firebase->createDatabase();
-
-        $newPost = $database
-        ->getReference('coosedsarlstream')
-        ->push([
-        'title' => 'Testing data to add' ,
-        'category' => 'from Laravel'
-        ]);
-        echo "<h3> Data inserted</h3>";*/
+  
     }
 
     /**
