@@ -17,12 +17,12 @@ class FirebaseController extends Controller
      */
     public function index()
     {
-         
+         //conexion a la bd
         $firebase=(new Factory)->withServiceAccount(__DIR__.'/key/Firebase.json');
 
-        
+        //crea la bd
         $database = $firebase->createDatabase();
-
+        //accede a un campo de la bd
         $newPost = $database->getReference('/usuario/');
         
         echo "<pre>";
