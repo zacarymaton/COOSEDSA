@@ -24,7 +24,7 @@ class FirebaseController extends Controller
         $database = $firebase->createDatabase();
         //accede a un campo de la bd
         $newPost = $database->getReference('/usuario/');
-        
+        //mensaje de impresion con los valores de la base de datos
         echo "<pre>";
         print_r($newPost->getvalue());
   
