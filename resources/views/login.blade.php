@@ -1,8 +1,8 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  
-<!-- Mirrored from blacktie.co/demo/premium/dashio/dashboard/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Mar 2017 17:54:44 GMT -->
+
+<!-- Mirrored from blacktie.co/demo/premium/dashio/dashboard/{{ url('/')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Mar 2017 17:54:44 GMT -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
     <link href="/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        
+
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/style-responsive.css" rel="stylesheet">
@@ -37,7 +37,7 @@
 
 	  <div id="login-page">
 	  	<div class="container">
-	  	
+
 		      <form class="form-login" action="{{ url('/index') }}">
 		        <h2 class="form-login-heading">sign in now</h2>
 		        <div class="login-wrap">
@@ -47,13 +47,13 @@
 		            <label class="checkbox">
 		                <input type="checkbox" value="remember-me"> Remember me
 		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
-		
+		                    <a data-toggle="modal" href="{{ url('/')}}#myModal"> Forgot Password?</a>
+
 		                </span>
 		            </label>
 		            <button class="btn btn-theme btn-block" href="" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
 		            <hr>
-		            
+
 		            <div class="login-social-link centered">
 		            <p>or you can sign in via your social network</p>
 		                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
@@ -65,9 +65,9 @@
 		                    Create an account
 		                </a>
 		            </div>
-		
+
 		        </div>
-		
+
 		          <!-- Modal -->
 		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
 		              <div class="modal-dialog">
@@ -79,7 +79,7 @@
 		                      <div class="modal-body">
 		                          <p>Enter your e-mail address below to reset your password.</p>
 		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-		
+
 		                      </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
@@ -89,9 +89,9 @@
 		              </div>
 		          </div>
 		          <!-- modal -->
-		
-		      </form>	  	
-	  	
+
+		      </form>
+
 	  	</div>
 	  </div>
 
@@ -109,5 +109,5 @@
 
   </body>
 
-<!-- Mirrored from blacktie.co/demo/premium/dashio/dashboard/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Mar 2017 17:54:46 GMT -->
+<!-- Mirrored from blacktie.co/demo/premium/dashio/dashboard/{{ url('/')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Mar 2017 17:54:46 GMT -->
 </html>

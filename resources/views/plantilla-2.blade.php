@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <!-- Mirrored from blacktie.co/demo/premium/dashio/dashboard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Mar 2017 17:54:44 GMT -->
 <head>
     <meta charset="utf-8">
@@ -18,13 +18,13 @@
     <link href="/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="/js/gritter/css/jquery.gritter.css" />
-    
+
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/style-responsive.css" rel="stylesheet">
 
     <script src="/js/chart-master/Chart.js"></script>
-    
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -44,14 +44,14 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index-2.html" class="logo"><b>DASH<span>IO</span></b></a>
+            <a href="{{ url('/index')}}" class="logo"><b>DASH<span>IO</span></b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
                 <ul class="nav top-menu">
                     <!-- settings start -->
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index-2.html#">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="{{ url('/index')}}#">
                             <i class="fa fa-tasks"></i>
                             <span class="badge bg-theme">4</span>
                         </a>
@@ -61,7 +61,7 @@
                                 <p class="green">You have 4 pending tasks</p>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <div class="task-info">
                                         <div class="desc">Dashio Admin Panel</div>
                                         <div class="percent">40%</div>
@@ -74,7 +74,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <div class="task-info">
                                         <div class="desc">Database Update</div>
                                         <div class="percent">60%</div>
@@ -87,7 +87,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <div class="task-info">
                                         <div class="desc">Product Development</div>
                                         <div class="percent">80%</div>
@@ -100,7 +100,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <div class="task-info">
                                         <div class="desc">Payments Sent</div>
                                         <div class="percent">70%</div>
@@ -120,7 +120,7 @@
                     <!-- settings end -->
                     <!-- inbox dropdown start-->
                     <li id="header_inbox_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index-2.html#">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="{{ url('/index')}}#">
                             <i class="fa fa-envelope-o"></i>
                             <span class="badge bg-theme">5</span>
                         </a>
@@ -130,7 +130,7 @@
                                 <p class="green">You have 5 new messages</p>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <span class="photo"><img alt="avatar" src="/img/ui-zac.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Zac Snider</span>
@@ -142,7 +142,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <span class="photo"><img alt="avatar" src="/img/ui-divya.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Divya Manian</span>
@@ -154,7 +154,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <span class="photo"><img alt="avatar" src="/img/ui-danro.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Dan Rogers</span>
@@ -166,7 +166,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <span class="photo"><img alt="avatar" src="/img/ui-sherman.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Dj Sherman</span>
@@ -178,14 +178,14 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">See all messages</a>
+                                <a href="{{ url('/index')}}#">See all messages</a>
                             </li>
                         </ul>
                     </li>
                     <!-- inbox dropdown end -->
                     <!-- notification dropdown start-->
                     <li id="header_notification_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index-2.html#">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="{{ url('/index')}}#">
                             <i class="fa fa-bell-o"></i>
                             <span class="badge bg-warning">7</span>
                         </a>
@@ -195,35 +195,35 @@
                                 <p class="yellow">You have 7 new notifications</p>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <span class="label label-danger"><i class="fa fa-bolt"></i></span>
                                     Server Overloaded.
                                     <span class="small italic">4 mins.</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <span class="label label-warning"><i class="fa fa-bell"></i></span>
                                     Memory #2 Not Responding.
                                     <span class="small italic">30 mins.</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <span class="label label-danger"><i class="fa fa-bolt"></i></span>
                                     Disk Space Reached 85%.
                                     <span class="small italic">2 hrs.</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">
+                                <a href="{{ url('/index')}}#">
                                     <span class="label label-success"><i class="fa fa-plus"></i></span>
                                     New User Registered.
                                     <span class="small italic">3 hrs.</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="index-2.html#">See all notifications</a>
+                                <a href="{{ url('/index')}}#">See all notifications</a>
                             </li>
                         </ul>
                     </li>
@@ -233,12 +233,12 @@
             </div>
             <div class="top-menu">
               <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="{{ url('/')}}">Logout</a></li>
               </ul>
             </div>
         </header>
       <!--header end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
@@ -247,12 +247,12 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-              
-                  <p class="centered"><a href="profile.html"><img src="/img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+
+                  <p class="centered"><a href="{{ url('/profile')}}"><img src="/img/ui-sam.jpg" class="img-circle" width="80"></a></p>
                   <h5 class="centered">Sam Soffes</h5>
-                    
+
                   <li class="mt">
-                      <a class="active" href="index-2.html">
+                      <a class="active" href="{{ url('/index')}}">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -264,10 +264,10 @@
                           <span>UI Elements</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="general.html">General</a></li>
-                          <li><a  href="buttons.html">Buttons</a></li>
-                          <li><a  href="panels.html">Panels</a></li>
-                          <li><a  href="font_awesome.html">Font Awesome</a></li>
+                          <li><a  href="{{ url('/general')}}">General</a></li>
+                          <li><a  href="{{ url('/buttons')}}">Buttons</a></li>
+                          <li><a  href="{{ url('/panels')}}">Panels</a></li>
+                          <li><a  href="{{ url('/font_awesome')}}">Font Awesome</a></li>
                       </ul>
                   </li>
 
@@ -277,13 +277,13 @@
                           <span>Components</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="grids.html">Grids</a></li>
-                          <li><a  href="calendar.html">Calendar</a></li>
-                          <li><a  href="gallery.html">Gallery</a></li>
-                          <li><a  href="todo_list.html">Todo List</a></li>
-                          <li><a  href="dropzone.html">Dropzone File Upload</a></li>
-                          <li><a  href="inline_editor.html">Inline Editor</a></li>
-                          <li><a  href="file_upload.html">Multiple File Upload</a></li>
+                          <li><a  href="{{ url('/grids') }}">Grids</a></li>
+                          <li><a  href="{{ url('/calendar') }}">Calendar</a></li>
+                          <li><a  href="{{ url('/gallery') }}">Gallery</a></li>
+                          <li><a  href="{{ url('/todo_list') }}">Todo List</a></li>
+                          <li><a  href="{{ url('/dropzone') }}">Dropzone File Upload</a></li>
+                          <li><a  href="{{ url('/inline_editor') }}">Inline Editor</a></li>
+                          <li><a  href="{{ url('/file_upload')}}">Multiple File Upload</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -292,15 +292,15 @@
                           <span>Extra Pages</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="blank.html">Blank Page</a></li>
-                          <li><a  href="login.html">Login</a></li>
-                          <li><a  href="lock_screen.html">Lock Screen</a></li>
-                          <li><a  href="profile.html">Profile</a></li>
-                          <li><a  href="invoice.html">Invoice</a></li>
-                          <li><a  href="pricing_table.html">Pricing Table</a></li>
-                          <li><a  href="faq.html">FAQ</a></li>
-                          <li><a  href="404.html">404 Error</a></li>
-                          <li><a  href="500.html">500 Error</a></li>
+                          <li><a  href="{{ url('/blank')}}">Blank Page</a></li>
+                          <li><a  href="{{ url('/')}}">Login</a></li>
+                          <li><a  href="{{ url('/lock_screen')}}">Lock Screen</a></li>
+                          <li><a  href="{{ url('/profile')}}">Profile</a></li>
+                          <li><a  href="{{ url('/invoice')}}">Invoice</a></li>
+                          <li><a  href="{{ url('/pricing_table')}}">Pricing Table</a></li>
+                          <li><a  href="{{ url('/faq')}}">FAQ</a></li>
+                          <li><a  href="{{ url('/404')}}">404 Error</a></li>
+                          <li><a  href="{{ url('/500')}">500 Error</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -309,9 +309,9 @@
                           <span>Forms</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="form_component.html">Form Components</a></li>
-                          <li><a  href="advanced_form_components.html">Advanced Components</a></li>
-                          <li><a  href="form_validation.html">Form Validation</a></li>
+                          <li><a  href="{{ url('/form_component')}}">Form Components</a></li>
+                          <li><a  href="{{ url('/advanced_form_components')}}">Advanced Components</a></li>
+                          <li><a  href="{{ url('/form_validation')}}">Form Validation</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -320,13 +320,13 @@
                           <span>Data Tables</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="basic_table.html">Basic Table</a></li>
-                          <li><a  href="responsive_table.html">Responsive Table</a></li>
-                          <li><a  href="advanced_table.html">Advanced Table</a></li>
+                          <li><a  href="{{ url('/basic_table')}}">Basic Table</a></li>
+                          <li><a  href="{{ url('/responsive_table')}}">Responsive Table</a></li>
+                          <li><a  href="{{ url('/advanced_table')}}">Advanced Table</a></li>
                       </ul>
                   </li>
                   <li>
-                      <a  href="inbox.html">
+                      <a  href="{{ url('/inbox')}}">
                           <i class="fa fa-envelope"></i>
                           <span>Mail </span>
                           <span class="label label-theme pull-right mail-info">2</span>
@@ -338,10 +338,10 @@
                           <span>Charts</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="morris.html">Morris</a></li>
-                          <li><a  href="chartjs.html">Chartjs</a></li>
-                          <li><a  href="flot_chart.html">Flot Charts</a></li>
-                          <li><a  href="xchart.html">xChart</a></li>
+                          <li><a  href="{{ url('/morris')}}">Morris</a></li>
+                          <li><a  href="{{ url('/chartjs')}}">Chartjs</a></li>
+                          <li><a  href="{{ url('/flot_chart')}}">Flot Charts</a></li>
+                          <li><a  href="{{ url('/xchart')}}">xChart</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -350,12 +350,12 @@
                           <span>Chat Room</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="lobby.html">Lobby</a></li>
-                          <li><a  href="chat_room.html"> Chat Room</a></li>
+                          <li><a  href="{{ url('/lobby')}}">Lobby</a></li>
+                          <li><a  href="{{ url('/chat_room')}}"> Chat Room</a></li>
                       </ul>
                   </li>
                   <li>
-                      <a href="google_maps.html" >
+                      <a href="{{ url('/google_maps')}}" >
                           <i class="fa fa-map-marker"></i>
                           <span>Google Maps </span>
                       </a>
@@ -366,7 +366,7 @@
           </div>
       </aside>
       <!--sidebar end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -376,7 +376,7 @@
 
               <div class="row">
                   <div class="col-lg-9 main-chart">
-                  
+
                       <!--CUSTOM CHART START -->
                       <div class="border-head">
                           <h3>USER VISITS</h3>
@@ -420,7 +420,7 @@
                           </div>
                       </div>
                       <!--custom chart end-->
-                      
+
                       <div class="row mt">
                       <!-- SERVER STATUS PANELS -->
                         <div class="col-md-4 col-sm-4 mb">
@@ -452,7 +452,7 @@
                             </div>
                           </div><! --/grey-panel -->
                         </div><!-- /col-md-4-->
-                        
+
 
                         <div class="col-md-4 col-sm-4 mb">
                           <div class="darkblue-panel pn">
@@ -484,7 +484,7 @@
                 </footer>
                           </div><! -- /darkblue panel -->
                         </div><!-- /col-md-4 -->
-                        
+
             <div class="col-md-4 col-sm-4 mb">
               <!-- REVENUE PANEL -->
               <div class="green-panel pn">
@@ -499,8 +499,8 @@
             </div><!-- /col-md-4 -->
 
                     </div><!-- /row -->
-                    
-                    
+
+
           <div class="row">
             <!-- WEATHER PANEL -->
             <div class="col-md-4 mb">
@@ -510,7 +510,7 @@
                 <h4>BUDAPEST</h4>
               </div>
             </div><!-- /col-md-4-->
-            
+
             <!-- DIRECT MESSAGE PANEL -->
             <div class="col-md-8 mb">
               <div class="message-p pn">
@@ -525,7 +525,7 @@
                     <p><name>Dan Rogers</name> sent you a message.</p>
                     <p class="small">3 hours ago</p>
                     <p class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                  
+
                     <form class="form-inline" role="form">
                       <div class="form-group">
                         <input type="text" class="form-control" id="exampleInputText" placeholder="Reply Dan">
@@ -536,8 +536,8 @@
                 </div>
               </div><!-- /Message Panel-->
             </div><!-- /col-md-8  -->
-          </div>                        
-        
+          </div>
+
           <div class="row">
             <!-- TWITTER PANEL -->
             <div class="col-md-4 mb">
@@ -547,7 +547,7 @@
                 <p class="user">@Alvrz_is</p>
               </div>
             </div><!-- /col-md-4 -->
-            
+
             <div class="col-md-4 mb">
               <!-- WHITE PANEL - TOP USER -->
               <div class="white-panel pn">
@@ -568,7 +568,7 @@
                   </div>
               </div>
             </div><!-- /col-md-4 -->
-            
+
             <div class="col-md-4 mb">
               <!-- INSTAGRAM PANEL -->
               <div class="instagram-panel pn">
@@ -580,7 +580,7 @@
               </div>
             </div><!-- /col-md-4 -->
           </div><!-- /row -->
-          
+
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 mb">
               <div class="product-panel-2 pn">
@@ -591,7 +591,7 @@
                 <button class="btn btn-small btn-theme04">FULL REPORT</button>
               </div>
             </div><! --/col-md-4 -->
-            
+
             <! -- PROFILE 02 PANEL -->
             <div class="col-lg-4 col-md-4 col-sm-4 mb">
               <div class="content-panel pn">
@@ -608,7 +608,7 @@
                 </div>
               </div><! --/panel -->
             </div><!--/ col-md-4 -->
-            
+
                         <div class="col-md-4 col-sm-4 mb">
                 <div class="green-panel pn">
                   <div class="green-header">
@@ -631,15 +631,15 @@
                 <h3>60% USED</h3>
                 </div>
               </div><! --/col-md-4 -->
-          </div><!-- /row --> 
-          
+          </div><!-- /row -->
+
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
-                  
-                  
+
+
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
-      *********************************************************************************************************************************************************** -->                  
-                  
+      *********************************************************************************************************************************************************** -->
+
                   <div class="col-lg-3 ds">
                     <!--COMPLETED ACTIONS DONUTS CHART-->
                     <div class="donut-main">
@@ -659,7 +659,7 @@
                 var myDoughnut = new Chart(document.getElementById("newchart").getContext("2d")).Doughnut(doughnutData);
             </script>
                     </div>
-                  
+
                       <!--NEW EARNING STATS -->
                       <div class="panel terques-chart">
                           <div class="panel-body">
@@ -674,7 +674,7 @@
                           </div>
                       </div>
                       <!--new earning end-->
-                      
+
                       <!-- RECENT ACTIVITIES SECTION -->
                       <h4 class="centered mt">RECENT ACTIVITY</h4>
                       <!-- First Activity -->
@@ -781,7 +781,7 @@
                                 </div>
                             </div>
                         </div><!-- / calendar -->
-                      
+
                   </div><!-- /col-lg-3 -->
               </div><! --/row -->
           </section>
@@ -792,7 +792,7 @@
       <footer class="site-footer">
           <div class="text-center">
               2014 - Alvarez.is
-              <a href="index-2.html#" class="go-top">
+              <a href="{{ url('/index')}}#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
@@ -812,14 +812,14 @@
 
     <!--common script for all pages-->
     <script src="/js/common-scripts.js"></script>
-    
+
     <script type="text/javascript" src="/js/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="/js/gritter-conf.js"></script>
 
     <!--script for this page-->
-    <script src="/js/sparkline-chart.js"></script>    
-  <script src="/js/zabuto_calendar.js"></script>  
-  
+    <script src="/js/sparkline-chart.js"></script>
+  <script src="/js/zabuto_calendar.js"></script>
+
   <script type="text/javascript">
         $(document).ready(function () {
         var unique_id = $.gritter.add({
@@ -840,7 +840,7 @@
         return false;
         });
   </script>
-  
+
   <script type="application/javascript">
         $(document).ready(function () {
             $("#date-popover").popover({html: true, trigger: "manual"});
@@ -848,7 +848,7 @@
             $("#date-popover").click(function (e) {
                 $(this).hide();
             });
-        
+
             $("#my-calendar").zabuto_calendar({
                 action: function () {
                     return myDateFunction(this.id, false);
@@ -866,8 +866,8 @@
                 ]
             });
         });
-        
-        
+
+
         function myNavFunction(id) {
             $("#date-popover").hide();
             var nav = $("#" + id).data("navigation");
@@ -875,7 +875,7 @@
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
     </script>
-  
+
 
   </body>
 
