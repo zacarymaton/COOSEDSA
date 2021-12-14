@@ -296,7 +296,7 @@
                           <li><a  href="{{ url('/pricing_table')}}">Pricing Table</a></li>
                           <li><a  href="{{ url('/faq')}}">FAQ</a></li>
                           <li><a  href="{{ url('/404')}}">404 Error</a></li>
-                          <li><a  href="{{ url('/500')}">500 Error</a></li>
+                          <li><a  href="{{ url('/500')}}">500 Error</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">

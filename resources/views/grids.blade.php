@@ -296,7 +296,7 @@
                           <li><a  href="{{ url('/pricing_table')}}">Pricing Table</a></li>
                           <li><a  href="{{ url('/faq')}}">FAQ</a></li>
                           <li><a  href="{{ url('/404')}}">404 Error</a></li>
-                          <li><a  href="{{ url('/500')}">500 Error</a></li>
+                          <li><a  href="{{ url('/500')}}">500 Error</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -452,7 +452,7 @@
       <footer class="site-footer">
           <div class="text-center">
               2014 - Alvarez.is
-              <a href="{{url('/grid'}}#" class="go-top">
+              <a href="{{url('/grid')}}" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>

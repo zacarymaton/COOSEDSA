@@ -244,7 +244,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
-              	  <p class="centered"><a href="{{ url('/profile')}"><img src="/img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+              	  <p class="centered"><a href="{{ url('/profile')}}"><img src="/img/ui-sam.jpg" class="img-circle" width="80"></a></p>
               	  <h5 class="centered">Sam Soffes</h5>
 
                   <li class="mt">
@@ -296,7 +296,7 @@
                           <li><a  href="{{ url('/pricing_table')}}">Pricing Table</a></li>
                           <li><a  href="{{ url('/faq')}}">FAQ</a></li>
                           <li><a  href="{{ url('/404')}}">404 Error</a></li>
-                          <li><a  href="{{ url('/500')}">500 Error</a></li>
+                          <li><a  href="{{ url('/500')}}">500 Error</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
