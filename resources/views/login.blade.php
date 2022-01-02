@@ -11,7 +11,7 @@
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="../../../../../alvarez.is/demo/dashio/favicon.html">
 
-    <title>DASHIO - Bootstrap Admin + Front-End template</title>
+    <title>Sistema de Control de Seguimiento</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
@@ -38,31 +38,34 @@
 	  <div id="login-page">
 	  	<div class="container">
 
-		      <form class="form-login" action="{{ url('/index') }}">
-		        <h2 class="form-login-heading">sign in now</h2>
+		      <form class="form-login" method="POST" action="{{ route('login') }}">
+                {{ csrf_field() }}
+		        <h2 class="form-login-heading">Registrate</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="User ID" autofocus>
+		            <input   name="name"  value="{{ old('name') }}"class="form-control" placeholder="Ingresa tu Nombre de Usuario" autofocus>
+                    {!! $errors->first('name','<span class="help-block">:message</span>') !!}
 		            <br>
-		            <input type="password" class="form-control" placeholder="Password">
+		            <input type="password" name="password" class="form-control" placeholder="Contraseña" >
+                    {!! $errors->first('password','<span class="help-block">:message</span>') !!}
 		            <label class="checkbox">
-		                <input type="checkbox" value="remember-me"> Remember me
+		                <input type="checkbox" value="remember-me"> Recuérdame
 		                <span class="pull-right">
-		                    <a data-toggle="modal" href="{{ url('/')}}#myModal"> Forgot Password?</a>
+		                    <a data-toggle="modal" href="{{ url('/')}}#myModal"> has olvidado tu Contraseña?</a>
 
 		                </span>
 		            </label>
-		            <button class="btn btn-theme btn-block" href="" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+		            <button class="btn btn-theme btn-block" ><i class="fa fa-lock"></i> Iniciar Sesión</button>
 		            <hr>
 
 		            <div class="login-social-link centered">
-		            <p>or you can sign in via your social network</p>
+		            <p>o puede iniciar sesion a traves de su red social</p>
 		                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
 		                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
 		            </div>
 		            <div class="registration">
-		                Don't have an account yet?<br/>
-		                <a class="" href="#">
-		                    Create an account
+		                Aún no tienes una Cuenta?<br/>
+		                <a data-toggle="modal" href="#registroModal">
+		                    Crear una cuenta
 		                </a>
 		            </div>
 
@@ -74,21 +77,58 @@
 		                  <div class="modal-content">
 		                      <div class="modal-header">
 		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                          <h4 class="modal-title">Forgot Password ?</h4>
+		                          <h4 class="modal-title">Olvidaste tu Contraseña ?</h4>
 		                      </div>
 		                      <div class="modal-body">
-		                          <p>Enter your e-mail address below to reset your password.</p>
-		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+		                          <p>Ingresa tu direcciond de correo para Recuperar contraseña</p>
+		                          <input type="text" name="correo" placeholder="correo electronico" autocomplete="off" class="form-control placeholder-no-fix">
 
 		                      </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" type="button">Submit</button>
+		                          <button class="btn btn-theme" type="button">Enviar</button>
 		                      </div>
 		                  </div>
 		              </div>
 		          </div>
 		          <!-- modal -->
+
+
+		          <!-- Modal -->
+                  <form>
+                    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="registroModal" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Registro de Usuario</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Ingrese un Nombre de Usuario</p>
+                                    <input type="text" id="user_new" name="user_new" placeholder="nombre de usuario" autocomplete="off" class="form-control placeholder-no-fix">
+
+                                </div>
+                                <div class="modal-body">
+                                  <p>Ingrese su contraseña de usuario.</p>
+                                  <input type="password" id="password_new" name="password_new" placeholder="ingrese su contraseña de Usuario" autocomplete="off" class="form-control placeholder-no-fix">
+
+                              </div>
+                              <div class="modal-body">
+                                  <p>Ingrese su Direccion de Correo Electronico</p>
+                                  <input type="email" id="email" name="email" placeholder="email" autocomplete="off" class="form-control placeholder-no-fix">
+
+                              </div>
+
+                                <div class="modal-footer">
+                                    <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
+                                    <button class="btn btn-theme" type="button" onClick="registro()" >Registrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal -->
+
+                  </form>
 
 		      </form>
 
@@ -105,7 +145,7 @@
     <script>
         $.backstretch("/img/login-bg.jpg", {speed: 500});
     </script>
-
+    <script src="{{ asset('js/usuariolog/usuariolog.js') }}"></script>
 
   </body>
 

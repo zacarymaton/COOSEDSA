@@ -27,7 +27,7 @@ class FirebaseController extends Controller
         //mensaje de impresion con los valores de la base de datos
         echo "<pre>";
         print_r($newPost->getvalue());
-  
+
     }
 
     /**

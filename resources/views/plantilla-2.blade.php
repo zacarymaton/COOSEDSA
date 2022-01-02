@@ -10,7 +10,7 @@
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="../../../../../alvarez.is/demo/dashio/favicon.html">
 
-    <title>DASHIO - Bootstrap Admin + Front-End template</title>
+    <title>COOSEDSA R.L.</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
@@ -44,7 +44,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="{{ url('/index')}}" class="logo"><b>DASH<span>IO</span></b></a>
+            <a href="{{ url('/index')}}" class="logo"><b>COOSEDSA <span>R.L.</span></b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
@@ -233,7 +233,12 @@
             </div>
             <div class="top-menu">
               <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="{{ url('/')}}">Logout</a></li>
+              </br>
+                <form class="logout" method="POST" action="{{ route ('logout') }}">
+                    {{ csrf_field() }}
+                    <li><button class="btn btn-theme" >Cerrar Sesion</button></li>
+                  </form>
+                    {{--  <li><button class="logout" method="POST" href="{{ route('logout')}}">Cerrar Sesion</button></li>  --}}
               </ul>
             </div>
         </header>
@@ -249,15 +254,15 @@
               <ul class="sidebar-menu" id="nav-accordion">
 
                   <p class="centered"><a href="{{ url('/profile')}}"><img src="/img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-                  <h5 class="centered">Sam Soffes</h5>
+                  <h5 class="centered">{{ $usuario_logeado->name }}</h5>
 
                   <li class="mt">
-                      <a class="active" href="{{ url('/index')}}">
+                      <a class="active" href="{{ route('index')}}">
                           <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
+                          <span>Inicio</span>
                       </a>
                   </li>
-
+{{--
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
@@ -302,19 +307,80 @@
                           <li><a  href="{{ url('/404')}}">404 Error</a></li>
                           <li><a  href="{{ url('/500')}}">500 Error</a></li>
                       </ul>
-                  </li>
+                  </li>  --}}
+                  <li class="sub-menu">
+                    <a href="javascript:;" >
+                        <i class="fa fa-desktop"></i>
+                        <span>Registro Del Cliente</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="{{ url('/form_component')}}">Registrar Cliente</a></li>
+                        {{--  <li><a  href="{{ url('/advanced_form_components')}}">Modificar Cliente</a></li>  --}}
+                        <li><a  href="{{ route('form_validation')}}">Listar Clientes</a></li>
+                    </ul>
+                </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-tasks"></i>
-                          <span>Forms</span>
+                          <span>Administrar Servicios</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="{{ url('/form_component')}}">Form Components</a></li>
-                          <li><a  href="{{ url('/advanced_form_components')}}">Advanced Components</a></li>
-                          <li><a  href="{{ url('/form_validation')}}">Form Validation</a></li>
+                        <li><a  href="{{ url('/registrar_servicio')}}">Registrar Servicios</a></li>
+                        {{--  <li><a  href="{{ url('/advanced_form_components')}}">Modificar Servicios</a></li>  --}}
+                        <li><a  href="{{ url('/listar_servicios')}}">Listar Servicios</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
+                    <a href="javascript:;" >
+                        <i class="fa fa-tasks"></i>
+                        <span>Registro Del Personal</span>
+                    </a>
+                    <ul class="sub">
+                        <li ><a  href="{{ url('/registrar_empresa_servicio')}}">Registrar Empresa Servicio</a></li>
+                        <li ><a  href="{{ url('/listar_empresa_servicios')}}">Listar Servicios Empresa</a></li>
+                        <li><a  href="{{ url('/registrar_personal')}}">Registrar Personal</a></li>
+                        {{--  <li><a  href="{{ url('/advanced_form_components')}}">Modificar Personal</a></li>  --}}
+                        <li><a  href="{{ url('/listar_empleados')}}">Listar Personal</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" >
+                        <i class="fa fa-tasks"></i>
+                        <span>Administrar Solicitudes</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="{{ url('/registrar_solicitudes')}}">Registrar Solicitudes</a></li>
+                        {{--  <li><a  href="{{ url('/advanced_form_components')}}">Modificar Solicitudes</a></li>  --}}
+                        <li><a  href="{{ url('/form_validation')}}">Listar Solicitudes</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" >
+                        <i class="fa fa-book"></i>
+                        <span>Asignar Trabajo</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="{{ url('/registrar_trabajo')}}">Registrar Trabajo</a></li>
+                        {{--  <li><a  href="{{ url('/advanced_form_components')}}">Modificar Trabajo</a></li>  --}}
+                        <li><a  href="{{ url('/form_validation')}}">Listar Trabajo</a></li>
+                        <li><a href="{{ url('/google_maps')}}" >
+                            <i class="fa fa-map-marker"></i>
+                            <span>Seguimiento</span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" >
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span>Reportes Administrativo</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="{{ url('/form_component')}}">Registrar Trabajo</a></li>
+                        <li><a  href="{{ url('/advanced_form_components')}}">Modificar Trabajo</a></li>
+                        <li><a  href="{{ url('/form_validation')}}">Listar Trabajo</a></li>
+                    </ul>
+                </li>
+                  {{--  <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-th"></i>
                           <span>Data Tables</span>
@@ -353,7 +419,7 @@
                           <li><a  href="{{ url('/lobby')}}">Lobby</a></li>
                           <li><a  href="{{ url('/chat_room')}}"> Chat Room</a></li>
                       </ul>
-                  </li>
+                  </li>  --}}
                   <li>
                       <a href="{{ url('/google_maps')}}" >
                           <i class="fa fa-map-marker"></i>
@@ -824,7 +890,7 @@
         $(document).ready(function () {
         var unique_id = $.gritter.add({
             // (string | mandatory) the heading of the notification
-            title: 'Welcome to Dashio!',
+            title: 'Bienvenido a COOSEDSA R.L.!',
             // (string | mandatory) the text inside the notification
             text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo. Developed by <a href="http://alvarez.is" target="_blank" style="color:#4ECDC4">Alvarez.is</a>.',
             // (string | optional) the image to display on the left
